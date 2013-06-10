@@ -46,7 +46,7 @@ $('body').find('.language').each(function() {
 var asRawText = '';
 for (chapter in chapters) {
   for (verse in chapters[chapter].verses) {
-    var metadata = book + ':' + chapter + ':' + chapters[chapter].verses[verse]._verseNumber;
+    var metadata = book + ':' + chapter.replace("chapter","") + ':' + chapters[chapter].verses[verse]._verseNumber;
     for (language in chapters[chapter].verses[verse]) {
       if (isNumber(chapters[chapter].verses[verse][language])) {
         continue;
