@@ -2,48 +2,46 @@
 var book = 'Genesis';
 var chapters = [];
 
-$('#english').children('.chapter').each(function(){
-  var chapter = $(this).children('.label')[0].innerHTML;
+$('body').find('.language').each(function() {
 
-  (function(chapterNumber){
+  var languagecode = this.getAttribute('id');
 
-    $(this).find('.verse').each(function(){
+  $(this).children('.chapter').each(function() {
+    try {
+     var chapter = $(this).children('.label')[0].innerHTML;
+    } catch (err) {
+      alert('This chapter did not download correctly.');
+    }
 
-      var vsn = $(this).find('.label').html()
 
-      chapters[chapterNumber].vs = chapters[chapterNumber].vs || [];
-      chapters[chapterNumber].vs[vsn] = vs[vsn] || {}
 
-      chapters[chapterNumber].vs[vsn].en = $(this).find('.content').html()
+    (function(chapterNumber, chapterDiv, langCode) {
 
-      chapters[chapterNumber].vs[vsn].verseNumber = vsn
+      $(chapterDiv).find('.verse').each(function() {
 
-    })
+        try {
+          var vsn = $(this).find('.label')[0].innerHTML;
+          console.log('working: ' , this);
+        } catch (err) {
+          console.log('not working: ' , this);
+        }
 
-  })(chapter);
-    
-})
+        chapters[chapterNumber] = chapters[chapterNumber] || {};
+        chapters[chapterNumber].vs = chapters[chapterNumber].vs || [];
+        chapters[chapterNumber].vs[vsn] = chapters[chapterNumber].vs[vsn] || {};
 
-$('#inuktitut').children('.chapter').each(function(){
-  var chapter = $(this).children('.label')[0].innerHTML;
+        chapters[chapterNumber].vs[vsn][langCode] = $(this).find('.content').html();
 
-  (function(chapterNumber){
+        chapters[chapterNumber].vs[vsn].verseNumber = vsn;
 
-    $(this).find('.verse').each(function(){
+      });
 
-      var vsn = $(this).find('.label').html()
+    })(chapter, this, languagecode);
 
-      chapters[chapterNumber].vs = chapters[chapterNumber].vs || [];
-      chapters[chapterNumber].vs[vsn] = vs[vsn] || {}
+  });
 
-      chapters[chapterNumber].vs[vsn].iu = $(this).find('.content').html()
+});
 
-    })
-
-  })(chapter);
-    
-})
-
-for (verse in vs){
-  console.log(vs[verse].verseNumber + ":" + vs[verse].en + "\n" + vs[verse].iu )
-}
+//for (verse in vs){
+//  console.log(vs[verse].verseNumber + ":" + vs[verse].en + "\n" + vs[verse].iu )
+//}
