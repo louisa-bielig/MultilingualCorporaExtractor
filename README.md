@@ -157,7 +157,7 @@ Chapter 9 downloaded.
 Finished!
 
 Enter the language number code and press [ENTER]: exit
-$
+$ google-chrome 1co-9-9-1370897938.html &
 
 </pre>
 
