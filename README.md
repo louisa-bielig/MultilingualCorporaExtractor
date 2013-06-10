@@ -12,7 +12,7 @@ A spider for extracting multilingual corpora using Node.io and international bib
 Sample Output:
 --------------
 
-The end result is an html file which contains that book with multilingual content alligned in three formats.  
+The end result is an html file which automatically makes an alligned corpus and appends it to the top of the document in three formats.  If you want another format, you can modify the alignChaptersAndVerses.js script.
 
 * Raw Aligned Text
 
