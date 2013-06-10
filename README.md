@@ -65,22 +65,23 @@ The end result is an html file which contains that book with multilingual conten
          <chapter9 chapterNumber="9">
             <verses>
                <verse6 verseNumber="6">
-                  <eaib>ᐅᕝᕙᓘ ᐸᕐᓇᐹᓯᓗ ᐅᕙᒍᒃ ᐃᓅᑦᔪᑎᒋᓂᐊᖅᑕᑦᑎᓐᓂᒃ ᐃᖅᑲᓁᔭᖅᑐᑑᔭᕆᐊᖃᖅᐱᓅᒃ?</eaib>
-                  <mayabi>¿Wa ca tucultique'ex chéen teen yéetel Bernabé unaj c meyaj yéetel áakab?</mayabi>
-                  <w234>Eller hafver jag och Barnabas allena icke magt sammaledes göra?</w234>
-                  <nlt>Or is it only Barnabas and I who have to work to support ourselves?</nlt>
+                  <inuktitut>ᐅᕝᕙᓘ ᐸᕐᓇᐹᓯᓗ ᐅᕙᒍᒃ ᐃᓅᑦᔪᑎᒋᓂᐊᖅᑕᑦᑎᓐᓂᒃ ᐃᖅᑲᓁᔭᖅᑐᑑᔭᕆᐊᖃᖅᐱᓅᒃ?</inuktitut>
+                  <yucatec>¿Wa ca tucultique'ex chéen teen yéetel Bernabé unaj c meyaj yéetel áakab?</yucatec>
+                  <swedish>Eller hafver jag och Barnabas allena icke magt sammaledes göra?</swedish>
+                  <english>Or is it only Barnabas and I who have to work to support ourselves?</english>
                </verse6>
                <verse7 verseNumber="7">
-                  <eaib>ᓇᓪᓕᐊᑦ ᐅᓇᑕᖅᑐᒃᓴᐅᓪᓗᓂ ᐊᑐᕐᖕᓂᐊᖅᑕᒥᓂᒃ ᓇᖕᒥᓂᖅ ᐊᑭᓖᓲᖑᕚ? ᓇᓪᓕᐊᑦ ᕔᓂᒃᓴᓂᒃ ᑲᓐᖓᖅᓱᓚᐅᖅᑕᒥᓂᒃ ᐱᕈᖅᓰᕕᖁᑎᒥᓂᑦ ᐱᕈᖅᑐᓂᒃ ᓂᕆᕙᓐᖏᓛᖅ? ᓇᓪᓕᐊᓪᓗ ᐆᒪᔪᓂᒃ ᑲᒪᔨᐅᔪᖅ ᐆᒪᔪᖁᑎᒥ ᐃᒻᒧᖏᓐᓂᒃ ᐃᒻᒧᒃᑖᖅᕕᖃᖅᐸᓐᖏᓛᖅ?</eaib>
-                  <mayabi>¿Máax cu beetic u soldadoil yéetel cu tojoltic ti' xan ba'ax cu xupic? ¿Máax cu pakic uva cu dzo'ocole' ma' tu jaantic u yich? ¿Máax cu canantic j tamano'ob cu dzo'ocole' ma' tu yukik u kaab u yiim le j tamano'obo'?</mayabi>
-                  <w234>Ho tjenar till krig på sin egen sold någon tid? Ho planterar en vingård, och icke äter af hans frukt? Eller ho vaktar en hjord, och äter icke af hjordsens mjölk?</w234>
-                  <nlt>What soldier has to pay his own expenses? What farmer plants a vineyard and doesn’t have the right to eat some of its fruit? What shepherd cares for a flock of sheep and isn’t allowed to drink some of the milk?</nlt>
+                  <inuktitut>ᓇᓪᓕᐊᑦ ᐅᓇᑕᖅᑐᒃᓴᐅᓪᓗᓂ ᐊᑐᕐᖕᓂᐊᖅᑕᒥᓂᒃ ᓇᖕᒥᓂᖅ ᐊᑭᓖᓲᖑᕚ? ᓇᓪᓕᐊᑦ ᕔᓂᒃᓴᓂᒃ ᑲᓐᖓᖅᓱᓚᐅᖅᑕᒥᓂᒃ ᐱᕈᖅᓰᕕᖁᑎᒥᓂᑦ ᐱᕈᖅᑐᓂᒃ ᓂᕆᕙᓐᖏᓛᖅ? ᓇᓪᓕᐊᓪᓗ ᐆᒪᔪᓂᒃ ᑲᒪᔨᐅᔪᖅ ᐆᒪᔪᖁᑎᒥ ᐃᒻᒧᖏᓐᓂᒃ ᐃᒻᒧᒃᑖᖅᕕᖃᖅᐸᓐᖏᓛᖅ?</inuktitut>
+                  <yucatec>¿Máax cu beetic u soldadoil yéetel cu tojoltic ti' xan ba'ax cu xupic? ¿Máax cu pakic uva cu dzo'ocole' ma' tu jaantic u yich? ¿Máax cu canantic j tamano'ob cu dzo'ocole' ma' tu yukik u kaab u yiim le j tamano'obo'?</yucatec>
+                  <swedish>Ho tjenar till krig på sin egen sold någon tid? Ho planterar en vingård, och icke äter af hans frukt? Eller ho vaktar en hjord, och äter icke af hjordsens mjölk?</swedish>
+                  <english>What soldier has to pay his own expenses? What farmer plants a vineyard and doesn’t have the right to eat some of its fruit? What shepherd cares for a flock of sheep and isn’t allowed to drink some of the milk?</english>
                </verse7>
             </verses>
          </chapter9>
       </chapters>
    </book>
 </xml>
+
 
 ```
 
@@ -96,17 +97,17 @@ The end result is an html file which contains that book with multilingual conten
             "verses":{
                "verse6":{
                   "_verseNumber":"6",
-                  "eaib":"ᐅᕝᕙᓘ ᐸᕐᓇᐹᓯᓗ ᐅᕙᒍᒃ ᐃᓅᑦᔪᑎᒋᓂᐊᖅᑕᑦᑎᓐᓂᒃ ᐃᖅᑲᓁᔭᖅᑐᑑᔭᕆᐊᖃᖅᐱᓅᒃ? ",
-                  "mayabi":"¿Wa ca tucultique'ex chéen teen yéetel Bernabé unaj c meyaj yéetel áakab? ",
-                  "w234":"Eller hafver jag och Barnabas allena icke magt sammaledes göra? ",
-                  "nlt":"Or is it only Barnabas and I who have to work to support ourselves?"
+                  "inuktitut":"ᐅᕝᕙᓘ ᐸᕐᓇᐹᓯᓗ ᐅᕙᒍᒃ ᐃᓅᑦᔪᑎᒋᓂᐊᖅᑕᑦᑎᓐᓂᒃ ᐃᖅᑲᓁᔭᖅᑐᑑᔭᕆᐊᖃᖅᐱᓅᒃ? ",
+                  "yucatec":"¿Wa ca tucultique'ex chéen teen yéetel Bernabé unaj c meyaj yéetel áakab? ",
+                  "swedish":"Eller hafver jag och Barnabas allena icke magt sammaledes göra? ",
+                  "english":"Or is it only Barnabas and I who have to work to support ourselves?"
                },
                "verse7":{
                   "_verseNumber":"7",
-                  "eaib":"ᓇᓪᓕᐊᑦ ᐅᓇᑕᖅᑐᒃᓴᐅᓪᓗᓂ ᐊᑐᕐᖕᓂᐊᖅᑕᒥᓂᒃ ᓇᖕᒥᓂᖅ ᐊᑭᓖᓲᖑᕚ? ᓇᓪᓕᐊᑦ ᕔᓂᒃᓴᓂᒃ ᑲᓐᖓᖅᓱᓚᐅᖅᑕᒥᓂᒃ ᐱᕈᖅᓰᕕᖁᑎᒥᓂᑦ ᐱᕈᖅᑐᓂᒃ ᓂᕆᕙᓐᖏᓛᖅ? ᓇᓪᓕᐊᓪᓗ ᐆᒪᔪᓂᒃ ᑲᒪᔨᐅᔪᖅ ᐆᒪᔪᖁᑎᒥ ᐃᒻᒧᖏᓐᓂᒃ ᐃᒻᒧᒃᑖᖅᕕᖃᖅᐸᓐᖏᓛᖅ?",
-                  "mayabi":"¿Máax cu beetic u soldadoil yéetel cu tojoltic ti' xan ba'ax cu xupic? ¿Máax cu pakic uva cu dzo'ocole' ma' tu jaantic u yich? ¿Máax cu canantic j tamano'ob cu dzo'ocole' ma' tu yukik u kaab u yiim le j tamano'obo'? ",
-                  "w234":"Ho tjenar till krig på sin egen sold någon tid? Ho planterar en vingård, och icke äter af hans frukt? Eller ho vaktar en hjord, och äter icke af hjordsens mjölk? ",
-                  "nlt":"What soldier has to pay his own expenses? What farmer plants a vineyard and doesn’t have the right to eat some of its fruit? What shepherd cares for a flock of sheep and isn’t allowed to drink some of the milk? "
+                  "inuktitut":"ᓇᓪᓕᐊᑦ ᐅᓇᑕᖅᑐᒃᓴᐅᓪᓗᓂ ᐊᑐᕐᖕᓂᐊᖅᑕᒥᓂᒃ ᓇᖕᒥᓂᖅ ᐊᑭᓖᓲᖑᕚ? ᓇᓪᓕᐊᑦ ᕔᓂᒃᓴᓂᒃ ᑲᓐᖓᖅᓱᓚᐅᖅᑕᒥᓂᒃ ᐱᕈᖅᓰᕕᖁᑎᒥᓂᑦ ᐱᕈᖅᑐᓂᒃ ᓂᕆᕙᓐᖏᓛᖅ? ᓇᓪᓕᐊᓪᓗ ᐆᒪᔪᓂᒃ ᑲᒪᔨᐅᔪᖅ ᐆᒪᔪᖁᑎᒥ ᐃᒻᒧᖏᓐᓂᒃ ᐃᒻᒧᒃᑖᖅᕕᖃᖅᐸᓐᖏᓛᖅ?",
+                  "yucatec":"¿Máax cu beetic u soldadoil yéetel cu tojoltic ti' xan ba'ax cu xupic? ¿Máax cu pakic uva cu dzo'ocole' ma' tu jaantic u yich? ¿Máax cu canantic j tamano'ob cu dzo'ocole' ma' tu yukik u kaab u yiim le j tamano'obo'? ",
+                  "swedish":"Ho tjenar till krig på sin egen sold någon tid? Ho planterar en vingård, och icke äter af hans frukt? Eller ho vaktar en hjord, och äter icke af hjordsens mjölk? ",
+                  "english":"What soldier has to pay his own expenses? What farmer plants a vineyard and doesn’t have the right to eat some of its fruit? What shepherd cares for a flock of sheep and isn’t allowed to drink some of the milk? "
                }
             }
          }
