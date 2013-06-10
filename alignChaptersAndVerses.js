@@ -31,7 +31,7 @@ $('body').find('.language').each(function() {
         console.log('working: ' , this);
         chapters[chapterNumber].verses[verseNumber] = chapters[chapterNumber].verses[verseNumber] || {};
         chapters[chapterNumber].verses[verseNumber]._verseNumber = verseNum;
-        chapters[chapterNumber].verses[verseNumber][langCode] = $(this).find('.content').html();
+        chapters[chapterNumber].verses[verseNumber][langCode] = $(this).find('.content').html().replace(/\n/g,"").replace(/  */g," ");
       } catch (err) {
         console.log('verse not working: ' , this);
       }
