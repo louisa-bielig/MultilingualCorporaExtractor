@@ -9,72 +9,6 @@ A spider for extracting multilingual corpora using Node.io and international bib
 4. It comes extremely well-indexed.
 
 
-Install:
---------
-
-1. Download [Node.js](http://nodejs.org/) if you don't already have it
-2. Then download this project
-
-```bash
-$ wget https://github.com/louisa-bielig/MultilingualCorporaExtractor/archive/master.zip
-$ unzip master.zip
-$ cd MultilingualCorporaExtractor
-$ npm install 
-```
-
-
-Usage: 
-------
-Here is a sample use of the interactive script:
-
-```bash
-$ ./createdata.sh
-Enter the three character code for the book you want to use for your corpus
-e.g. gen for Genesis and press [ENTER]: 1co
-Enter the starting chapter number for 1co and press [ENTER]: 9
-Enter the ending chapter number for 1co and press [ENTER]: 9
-
-Enter the language number code and press [ENTER]: 455
-Enter the language text code and press [ENTER]: inuktitut
-Working...
-9 9 1co 455 inuktitut 1co-9-9-1370897837.html
-Chapter 9 downloaded.
-Finished!
-
-Enter the language number code and press [ENTER]: 455
-Enter the language text code and press [ENTER]: inuktitut
-Working...
-9 9 1co 455 inuktitut 1co-9-9-1370897837.html
-Chapter 9 downloaded.
-Finished!
-
-Enter the language number code and press [ENTER]: 324
-Enter the language text code and press [ENTER]: yucatec
-Working...
-9 9 1co 324 yucatec 1co-9-9-1370897837.html
-Chapter 9 downloaded.
-Finished!
-
-Enter the language number code and press [ENTER]: 161
-Enter the language text code and press [ENTER]: swedish
-Working...
-9 9 1co 161 swedish 1co-9-9-1370897938.html
-Chapter 9 downloaded.
-Finished!
-
-Enter the language number code and press [ENTER]: 116
-Enter the language text code and press [ENTER]: english
-Working...
-9 9 1co 116 english 1co-9-9-1370897938.html
-Chapter 9 downloaded.
-Finished!
-
-Enter the language number code and press [ENTER]: exit
-$
-
-```
-
-
 Sample Output:
 --------------
 
@@ -158,6 +92,75 @@ The end result is an html file which contains that book with multilingual conten
    }
 }
 ```
+
+
+
+Install:
+--------
+
+1. Download [Node.js](http://nodejs.org/) if you don't already have it
+2. Then download this project
+
+```bash
+$ wget https://github.com/louisa-bielig/MultilingualCorporaExtractor/archive/master.zip
+$ unzip master.zip
+$ cd MultilingualCorporaExtractor
+$ npm install 
+```
+
+
+Usage: 
+------
+Here is a sample use of the interactive script:
+
+<pre>
+
+$ ./createdata.sh
+Enter the three character code for the book you want to use for your corpus
+e.g. gen for Genesis and press [ENTER]: 1co
+Enter the starting chapter number for 1co and press [ENTER]: 9
+Enter the ending chapter number for 1co and press [ENTER]: 9
+
+Enter the language number code and press [ENTER]: 455
+Enter the language text code and press [ENTER]: inuktitut
+Working...
+9 9 1co 455 inuktitut 1co-9-9-1370897837.html
+Chapter 9 downloaded.
+Finished!
+
+Enter the language number code and press [ENTER]: 455
+Enter the language text code and press [ENTER]: inuktitut
+Working...
+9 9 1co 455 inuktitut 1co-9-9-1370897837.html
+Chapter 9 downloaded.
+Finished!
+
+Enter the language number code and press [ENTER]: 324
+Enter the language text code and press [ENTER]: yucatec
+Working...
+9 9 1co 324 yucatec 1co-9-9-1370897837.html
+Chapter 9 downloaded.
+Finished!
+
+Enter the language number code and press [ENTER]: 161
+Enter the language text code and press [ENTER]: swedish
+Working...
+9 9 1co 161 swedish 1co-9-9-1370897938.html
+Chapter 9 downloaded.
+Finished!
+
+Enter the language number code and press [ENTER]: 116
+Enter the language text code and press [ENTER]: english
+Working...
+9 9 1co 116 english 1co-9-9-1370897938.html
+Chapter 9 downloaded.
+Finished!
+
+Enter the language number code and press [ENTER]: exit
+$
+
+</pre>
+
 
 License:
 --------
