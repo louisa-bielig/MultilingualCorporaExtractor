@@ -1,7 +1,7 @@
 MultilingualCorporaExtractor
 ============================
 
-A Spider for extracting multilingual corpora using Node.io and international bibles. This can be handy for building reasonably sized multilingual corpora for working on low-resoure languages [Henderson 2013] [1], Computational Field Workshop @McGill
+A spider for extracting multilingual corpora using Node.io and international bibles. This can be handy for building reasonably sized multilingual corpora for working on low-resoure languages [Henderson 2013] [1], Computational Field Workshop @McGill
 
 1. We can easily have a rough translation.
 2. The translations are extremely free.
