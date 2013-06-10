@@ -8,12 +8,27 @@ A spider for extracting multilingual corpora using Node.io and international bib
 3. Parables are perfect for studying discourse.
 4. It comes extremely well-indexed.
 
+
+Install:
+--------
+
+1. Download [Node.js](http://nodejs.org/) if you don't already have it
+2. Then download this project
+
+```bash
+$ wget https://github.com/louisa-bielig/MultilingualCorporaExtractor/archive/master.zip
+$ unzip master.zip
+$ cd MultilingualCorporaExtractor
+$ npm install 
+```
+
+
 Usage: 
 ------
 
 ```bash
-$ download.sh 1 20 gen 455 #download chapters 1 - 20 from Genesis in version 455 (Inuktitut).
-$ download.sh 3 3 gen 116 #download chapter 3 from Genesis in version 116 (NLT New Living Translation English).
+$ ./createdata.sh
+
 ```
 
 
