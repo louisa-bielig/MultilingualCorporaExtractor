@@ -1,6 +1,6 @@
 
 var book = document.body.getAttribute('id');
-var chapters = [];
+var chapters = {};
 
 function isNumber(n) {
   return !isNaN(parseFloat(n)) && isFinite(n);
@@ -17,28 +17,24 @@ $('body').find('.language').each(function() {
     alert('This chapter did not download correctly.');
   }
 
-
-  chapters[0] = {};
-  (function(chapterNumber, chapterDiv, langCode) {
+  (function(chapterNum, chapterDiv, langCode) {
+    chapterNumber = 'chapter' + chapterNum;
     chapters[chapterNumber] = chapters[chapterNumber] || {};
-    chapters[chapterNumber].verses = chapters[chapterNumber].verses || [];
-    chapters[chapterNumber].verses[0] = {};
+    chapters[chapterNumber]._chapterNumber = chapterNum;
+    chapters[chapterNumber].verses = chapters[chapterNumber].verses || {};
+
     $(chapterDiv).find('.verse').each(function() {
 
       try {
-        var verseNumber = $(this).find('.label')[0].innerHTML;
+        var verseNum = $(this).find('.label')[0].innerHTML;
+        verseNumber = 'verse' + verseNum;
         console.log('working: ' , this);
-        chapters[chapterNumber]._chapterNumber = chapterNumber;
         chapters[chapterNumber].verses[verseNumber] = chapters[chapterNumber].verses[verseNumber] || {};
-
+        chapters[chapterNumber].verses[verseNumber]._verseNumber = verseNum;
         chapters[chapterNumber].verses[verseNumber][langCode] = $(this).find('.content').html();
-
-        chapters[chapterNumber].verses[verseNumber]._verseNumber = verseNumber;
       } catch (err) {
         console.log('verse not working: ' , this);
       }
-
-
     });
 
   })(chapter, this, languagecode);
@@ -69,5 +65,5 @@ var finalJSON = '{"book" : {"_book":"' + book + '", "chapters":' + JSON.stringif
 var xmlDocStr = X2JS.json2xml_str(JSON.parse(finalJSON));
 
 $('body').prepend('<label class="json-label">JSON</label><textarea class="json">' + finalJSON + '</textarea>');
-$('body').prepend('<label class="xml-label">XML</label><textarea class="xml">' + xmlDocStr + '</textarea>');
+$('body').prepend('<label class="xml-label">XML</label><textarea class="xml"><?xml version="1.0" encoding="UTF-8"?><xml>' + xmlDocStr + '</xml></textarea>');
 $('body').prepend('<label class="rawtext-label">Text</label><textarea class="rawtext">' + asRawText + '</textarea>');
