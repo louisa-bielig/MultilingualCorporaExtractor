@@ -1,6 +1,10 @@
 
-var book = 'Genesis';
+var book = document.body.getAttribute('id');
 var chapters = [];
+
+function isNumber(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
 
 $('body').find('.language').each(function() {
 
@@ -9,39 +13,61 @@ $('body').find('.language').each(function() {
   $(this).children('.chapter').each(function() {
     try {
      var chapter = $(this).children('.label')[0].innerHTML;
-    } catch (err) {
-      alert('This chapter did not download correctly.');
-    }
+   } catch (err) {
+    alert('This chapter did not download correctly.');
+  }
 
 
+  chapters[0] = {};
+  (function(chapterNumber, chapterDiv, langCode) {
+    chapters[chapterNumber] = chapters[chapterNumber] || {};
+    chapters[chapterNumber].verses = chapters[chapterNumber].verses || [];
+    chapters[chapterNumber].verses[0] = {};
+    $(chapterDiv).find('.verse').each(function() {
 
-    (function(chapterNumber, chapterDiv, langCode) {
+      try {
+        var verseNumber = $(this).find('.label')[0].innerHTML;
+        console.log('working: ' , this);
+        chapters[chapterNumber]._chapterNumber = chapterNumber;
+        chapters[chapterNumber].verses[verseNumber] = chapters[chapterNumber].verses[verseNumber] || {};
 
-      $(chapterDiv).find('.verse').each(function() {
+        chapters[chapterNumber].verses[verseNumber][langCode] = $(this).find('.content').html();
 
-        try {
-          var vsn = $(this).find('.label')[0].innerHTML;
-          console.log('working: ' , this);
-        } catch (err) {
-          console.log('not working: ' , this);
-        }
+        chapters[chapterNumber].verses[verseNumber]._verseNumber = verseNumber;
+      } catch (err) {
+        console.log('verse not working: ' , this);
+      }
 
-        chapters[chapterNumber] = chapters[chapterNumber] || {};
-        chapters[chapterNumber].vs = chapters[chapterNumber].vs || [];
-        chapters[chapterNumber].vs[vsn] = chapters[chapterNumber].vs[vsn] || {};
 
-        chapters[chapterNumber].vs[vsn][langCode] = $(this).find('.content').html();
+    });
 
-        chapters[chapterNumber].vs[vsn].verseNumber = vsn;
-
-      });
-
-    })(chapter, this, languagecode);
-
-  });
+  })(chapter, this, languagecode);
 
 });
 
-//for (verse in vs){
-//  console.log(vs[verse].verseNumber + ":" + vs[verse].en + "\n" + vs[verse].iu )
-//}
+});
+
+var asRawText = '';
+for (chapter in chapters) {
+  for (verse in chapters[chapter].verses) {
+    var metadata = book + ':' + chapter + ':' + chapters[chapter].verses[verse]._verseNumber;
+    for (language in chapters[chapter].verses[verse]) {
+      if (isNumber(chapters[chapter].verses[verse][language])) {
+        continue;
+      } else {
+        var thisline = metadata + ' ' + chapters[chapter].verses[verse][language] + '\n';
+        console.log(thisline);
+        asRawText += thisline;
+      }
+    }
+    asRawText += '\n';
+  }
+}
+
+var X2JS = new X2JS();
+var finalJSON = '{"book" : {"_book":"' + book + '", "chapters":' + JSON.stringify(chapters) + '}}';
+var xmlDocStr = X2JS.json2xml_str(JSON.parse(finalJSON));
+
+$('body').prepend('<label class="json-label">JSON</label><textarea class="json">' + finalJSON + '</textarea>');
+$('body').prepend('<label class="xml-label">XML</label><textarea class="xml">' + xmlDocStr + '</textarea>');
+$('body').prepend('<label class="rawtext-label">Text</label><textarea class="rawtext">' + asRawText + '</textarea>');

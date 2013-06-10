@@ -21,7 +21,7 @@ read endchapter
 FILETIME=`date +"%s"`
 OUTFILE="$book-$startchapter-$endchapter-$FILETIME.html"
 
-echo "<!DOCTYPE html>" > $OUTFILE
+echo "<!DOCTYPE html><head><link rel='stylesheet' type='text/css' href='style.css' /></head><body id='"$book"' >" > $OUTFILE
 
 while true; do
   echo -n "Enter the language number code and press [ENTER]: "
@@ -29,7 +29,8 @@ while true; do
   if [ $langnumber == "exit" ]; 
     then 
       echo "<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>" >> $OUTFILE
-      echo "<script src='alignChaptersAndVerses.js'></script>" >> $OUTFILE
+      echo "<script src='xml2json.js'></script>" >> $OUTFILE
+      echo "<script src='alignChaptersAndVerses.js'></script></body>" >> $OUTFILE
       google-chrome $OUTFILE &
       exit 0
     else
